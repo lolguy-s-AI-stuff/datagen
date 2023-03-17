@@ -101,12 +101,11 @@ void gendialogenglish(){//makes basic dialog
 
 
 
-
 int main(){
     std::cout << "{data:[" << std::endl;
     for (size_t i = 0; i < 500; i++)
     {  
-        switch (rand()%6)
+        switch (rand()%7)
         {
         case 0:
             genadd();
@@ -121,10 +120,13 @@ int main(){
             gendiv();
             break;
         case 4:
-            genbasicenglish();
+            gendialogenglish();
             break;
         case 5:
-            gendialogenglish();
+            genbasicenglish();
+            break;
+        case 6:
+            genbasicenglish();
             break;
 
         default:
