@@ -5,8 +5,6 @@
 #include <sstream>
 #include <vector>
 
-//just think of what kind of data you could add, copy genadd, and modify it to the best of your liking
-
 //maths and shit start
 void genadd(){
     int num1 = rand()% 10000;
@@ -41,7 +39,7 @@ void genmul1(){
     std::cout << "{prompt:'" << num1<< space1 << "*"<< space2 <<  num2 << space3 << "=" << space4 << "',completion:'"<< space5 << num1 * num2 << "'}," << std::endl;
 }
 
-void genmul2(){
+void gendiv(){
     int num1 = rand()% 10000;
     int num2 = rand()% 10000;
     std::string space1 = rand()%100 < 50 ? " " : "";
@@ -49,7 +47,7 @@ void genmul2(){
     std::string space3 = rand()%100 < 50 ? " " : "";
     std::string space4 = rand()%100 < 50 ? " " : "";
     std::string space5 = rand()%100 < 50 ? " " : "";
-    std::cout << "{prompt:'" << num1 << space1 << "x"<< space2 <<  num2 << space3 << "=" << space4 << "',completion:'"<< space5 << num1 * num2 << "'}," << std::endl;
+    std::cout << "{prompt:'" << num1 << space1 << "/"<< space2 <<  num2 << space3 << "=" << space4 << "',completion:'"<< space5 << num1 / num2 << "'}," << std::endl;
 }
 //maths and shit end
 
@@ -120,7 +118,7 @@ int main(){
             genmul1();
             break;
         case 3:
-            genmul2();
+            gendiv();
             break;
         case 4:
             genbasicenglish();
@@ -136,5 +134,4 @@ int main(){
     }
     std::cout << "]}" << std::endl;
     
-
 }
